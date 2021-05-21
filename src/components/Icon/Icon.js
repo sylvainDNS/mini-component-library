@@ -4,21 +4,21 @@
  * interested, but otherwise you can rely on our docs to learn its
  * API / which props it takes.
  */
-import React from 'react';
-import styled from 'styled-components';
-import { Search, AtSign, ChevronDown } from 'react-feather';
+import React from 'react'
+import styled from 'styled-components'
+import { Search, AtSign, ChevronDown } from 'react-feather'
 
 const icons = {
   search: Search,
   'at-sign': AtSign,
   'chevron-down': ChevronDown,
-};
+}
 
 const Icon = ({ id, size, strokeWidth = 1, ...delegated }) => {
-  const Component = icons[id];
+  const Component = icons[id]
 
   if (!Component) {
-    throw new Error(`No icon found for ID: ${id}`);
+    throw new Error(`No icon found for ID: ${id}`)
   }
 
   return (
@@ -31,8 +31,8 @@ const Icon = ({ id, size, strokeWidth = 1, ...delegated }) => {
     >
       <Component color="currentColor" size={size} />
     </Wrapper>
-  );
-};
+  )
+}
 
 const Wrapper = styled.div`
   width: var(--size);
@@ -54,6 +54,6 @@ const Wrapper = styled.div`
     display: block;
     stroke-width: var(--stroke-width);
   }
-`;
+`
 
-export default Icon;
+export default Icon
